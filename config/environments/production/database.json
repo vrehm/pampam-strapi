@@ -1,0 +1,25 @@
+{
+    "defaultConnection": "default",
+    "connections": {
+        "default": {
+            "connector": "bookshelf",
+            "settings": {
+                "client": "postgres",
+                "host": "${process.env.POSTGRESQL_ADDON_HOST}",
+                "port": "${process.env.POSTGRESQL_ADDON_PORT}",
+                "database": "${process.env.POSTGRESQL_ADDON_DB}",
+                "username": "${process.env.POSTGRESQL_ADDON_USER}",
+                "password": "${process.env.POSTGRESQL_ADDON_PASSWORD}",
+                "schema": "public",
+                "ssl": false
+            },
+            "options": {
+                "debug": false,
+                "pool": {
+                    "min": 0,
+                    "max": 5
+                }
+            }
+        }
+    }
+}
