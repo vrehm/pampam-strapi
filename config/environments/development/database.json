@@ -1,0 +1,17 @@
+{
+    "defaultConnection": "default",
+    "connections": {
+        "default": {
+            "connector": "bookshelf",
+            "settings": {
+                "client": "postgres",
+                "database": "pampam-strapi",
+                "host": "127.0.0.1",
+                "port": 5432,
+                "username": "${process.env.DEV_USER}",
+                "password": "${process.env.DEV_PASSWORD}"
+            },
+            "options": {}
+        }
+    }
+}
