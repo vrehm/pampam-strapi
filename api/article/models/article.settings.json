@@ -28,6 +28,10 @@
     },
     "published_at": {
       "type": "date"
+    },
+    "categories": {
+      "via": "articles",
+      "collection": "category"
     }
   }
 }
