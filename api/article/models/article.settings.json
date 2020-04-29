@@ -34,8 +34,12 @@
       "collection": "category"
     },
     "author": {
-      "via": "articles",
-      "model": "author"
+      "model": "author",
+      "via": "articles"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

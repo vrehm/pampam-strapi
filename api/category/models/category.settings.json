@@ -17,6 +17,11 @@
       "collection": "article",
       "via": "categories",
       "dominant": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "default": "Generated automatically based on the name"
     }
   }
 }
