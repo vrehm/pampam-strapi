@@ -6,6 +6,9 @@ module.exports = async() => {
     const endpoint = "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token"
 
     const { data } = await axios.get(endpoint, {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
         params: { access_token: IG_TOKEN }
     })
 
