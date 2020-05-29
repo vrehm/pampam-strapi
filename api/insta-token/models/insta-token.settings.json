@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "insta_tokens",
+  "info": {
+    "name": "Insta Token"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "access_token": {
+      "type": "text"
+    },
+    "token_type": {
+      "type": "string"
+    },
+    "expires_in": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -11,11 +11,9 @@
  */
 
 module.exports = {
-  /**
-   * Simple example.
-   * Every monday at 1am.
-   */
-  // '0 1 * * 1': () => {
-  //
-  // }
+    // So let's execute these functions everyday at 2am.
+    '0 2 * * *': () => {
+        strapi.config.functions.refresh();
+        strapi.config.functions.instagram();
+    },
 };
