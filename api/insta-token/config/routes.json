@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/insta-token",
+      "handler": "insta-token.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/insta-token",
+      "handler": "insta-token.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/insta-token",
+      "handler": "insta-token.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
