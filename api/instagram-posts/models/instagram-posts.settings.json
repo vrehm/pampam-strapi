@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instagram_posts",
+  "info": {
+    "name": "Instagram Posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ig_id": {
+      "type": "uid"
+    },
+    "media_type": {
+      "type": "string"
+    },
+    "media_url": {
+      "type": "text"
+    },
+    "caption": {
+      "type": "text"
+    }
+  }
+}
