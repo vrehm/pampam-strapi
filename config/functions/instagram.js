@@ -6,8 +6,10 @@ module.exports = async() => {
     // let loading = true
     // const count = 50
     // const mediatypes = "['IMAGE', 'CAROUSEL_ALBUM']"
-    const { access_token } = await strapi.query('insta-token').findOne({ id: 1 });
-    const { ig_user_id } = await strapi.query('insta-user').findOne({ id: 1 });
+    const searchToken = await strapi.query('insta-token').find()
+    const searchUser = await strapi.query('insta-user').find()
+    const { access_token } = searchToken[0]
+    const { ig_user_id } = searchUser[0]
     const fields = "media_url,media_type,caption,children"
     const endpoint = 'https://graph.instagram.com/' + ig_user_id + '/media'
 
