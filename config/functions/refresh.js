@@ -2,14 +2,22 @@
 const axios = require('axios')
 
 module.exports = async() => {
-    const IG_TOKEN = process.env.IG_TOKEN
+    const searchToken = await strapi.query('insta-token').find()
+    let access_token = ''
+
+    if (searchToken.length > 0) {
+        access_token = searchToken[0]['access_token']
+    } else {
+        access_token = process.env.IG_TOKEN
+    }
+
     const endpoint = "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token"
 
     const { data } = await axios.get(endpoint, {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        params: { access_token: IG_TOKEN }
+        params: { access_token }
     })
 
     await strapi.query('insta-token').update({ id: 1 }, {
