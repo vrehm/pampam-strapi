@@ -10,7 +10,7 @@
   },
   "attributes": {
     "ig_user_id": {
-      "type": "biginteger"
+      "type": "text"
     }
   }
 }

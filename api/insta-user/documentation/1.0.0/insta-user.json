@@ -324,14 +324,14 @@
             "type": "string"
           },
           "ig_user_id": {
-            "type": "integer"
+            "type": "string"
           }
         }
       },
       "NewInsta-user": {
         "properties": {
           "ig_user_id": {
-            "type": "integer"
+            "type": "string"
           }
         }
       }
