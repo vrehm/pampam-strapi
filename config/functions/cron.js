@@ -12,8 +12,8 @@
 
 module.exports = {
     // So let's execute these functions everyday at 2am.
-    '0 2 * * *': () => {
+    '0 2 * * *': async() => {
         strapi.config.functions.refresh();
         strapi.config.functions.instagram();
-    },
+    }
 };
