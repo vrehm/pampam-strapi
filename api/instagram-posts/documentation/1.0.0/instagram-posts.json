@@ -546,6 +546,15 @@
           },
           "caption": {
             "type": "string"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "datetime"
           }
         }
       },
@@ -562,6 +571,15 @@
           },
           "caption": {
             "type": "string"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "datetime"
           }
         }
       }
