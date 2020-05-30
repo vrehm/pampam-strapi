@@ -20,6 +20,15 @@
     },
     "caption": {
       "type": "text"
+    },
+    "permalink": {
+      "type": "text"
+    },
+    "username": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "datetime"
     }
   }
 }

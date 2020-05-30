@@ -10,7 +10,7 @@ module.exports = async() => {
     const searchUser = await strapi.query('insta-user').find()
     const { access_token } = searchToken[0]
     const { ig_user_id } = searchUser[0]
-    const fields = "media_url,media_type,caption,children"
+    const fields = "media_url,media_type,caption,permalink,timestamp,username"
     const endpoint = 'https://graph.instagram.com/' + ig_user_id + '/media'
     const fullPath = endpoint + "?access_token=" + access_token + "&fields=" + fields
 
@@ -28,13 +28,19 @@ module.exports = async() => {
                 ig_id: post.id,
                 caption: post.caption,
                 media_type: post.media_type,
-                media_url: post.media_url
+                media_url: post.media_url,
+                permalink: post.permalink,
+                timestamp: post.timestamp,
+                username: post.username
             })
         } else {
             await strapi.query('instagram-posts').update({ ig_id: post.id }, {
                 caption: post.caption,
                 media_type: post.media_type,
-                media_url: post.media_url
+                media_url: post.media_url,
+                permalink: post.permalink,
+                timestamp: post.timestamp,
+                username: post.username
             })
         }
     }
