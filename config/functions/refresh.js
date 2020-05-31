@@ -26,5 +26,5 @@ module.exports = async() => {
         expires_in: data.expires_in
     })
 
-    strapi.log.info('Refresh Instagram Access Token is done')
+    strapi.log.debug('Refresh Instagram Access Token is done')
 }
