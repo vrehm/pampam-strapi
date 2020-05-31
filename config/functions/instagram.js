@@ -45,5 +45,5 @@ module.exports = async() => {
         }
     }
 
-    console.log('Import for last 25 Instagram posts is done')
+    strapi.log.info('Import for last 25 Instagram posts is done')
 }
